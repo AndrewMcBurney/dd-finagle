@@ -6,7 +6,10 @@ scalaVersion := "2.12.4"
 
 Compile / run / mainClass := Some("datadog.sbt.Server")
 Compile / run / fork := true
-Compile / run / javaOptions := Seq("-javaagent:dd-java-agent.jar")
+Compile / run / javaOptions := Seq(
+  "-javaagent:dd-java-agent.jar",
+  "-Ddd.service.name=scala-finagle"
+)
 
 libraryDependencies ++= Seq(
   "com.twitter" %% "finagle-http" % "18.2.0",

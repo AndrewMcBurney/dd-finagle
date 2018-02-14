@@ -1,4 +1,6 @@
+.ensime
 dd-java-agent.jar
 
+.ensime_cache/
 target/
 project/target/
